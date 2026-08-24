@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Products from "@/components/Products";
 
 // Página principal de PepEspaña.
 // Aquí iremos ensamblando todos los componentes
@@ -10,6 +11,7 @@ export default function Home() {
     <main className="min-h-screen bg-[#05070B] text-[#F4F7FA]">
       <Navbar />
       <Hero />
+      <Products />
     </main>
   );
 }
