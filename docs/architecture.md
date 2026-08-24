@@ -126,6 +126,7 @@ export default function Home() {
     <main>
       <Navbar />
       <Hero />
+      <Statement/>
       <Products />
     </main>
   );
@@ -147,6 +148,7 @@ page.tsx
 ├── Navbar
 ├── Hero
 │   └── VialVisual
+├── Statement
 └── Products
     └── ProductCard × 7
 ```
@@ -271,6 +273,28 @@ El archivo comienza con:
 ```
 
 ---
+
+### Statement
+
+Archivo:
+
+```text
+components/Statement.tsx
+```
+
+Responsabilidades:
+
+- transición editorial entre Hero y catálogo;
+- reducción deliberada de intensidad visual;
+- introducción del mensaje de marca;
+- preparación espacial para la sección Products.
+
+Actualmente es un Server Component y no necesita JavaScript de cliente ni Motion.
+
+La sección utiliza contenido HTML indexable y mantiene una jerarquía semántica mediante `section`, `h2` y `aria-labelledby`.
+
+---
+
 
 ### Products
 
