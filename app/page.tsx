@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Products from "@/components/Products";
+import Quality from "@/components/Quality";
 import Statement from "@/components/Statement";
 import IntroJourney from "@/components/IntroJourney";
 
@@ -16,8 +17,9 @@ export default function Home() {
         <Hero />
         <Statement />
       </IntroJourney>
-      
+
       <Products />
+      <Quality />
     </main>
   );
 }

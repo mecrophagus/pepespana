@@ -530,6 +530,46 @@ No debe competir con el Hero.
 
 ---
 
+## Quality
+
+Quality utiliza una animación local de scroll deliberadamente más sobria que la escena Hero → Statement.
+
+La sección no participa en `IntroJourney`.
+
+Su propio progreso se calcula mediante:
+
+```text
+useScroll
++
+useSpring
+```
+
+y controla principalmente:
+
+```text
+translateX
+opacity
+scaleX
+```
+
+La composición utiliza direcciones opuestas:
+
+```text
+contenido editorial
+→ entra desde la izquierda
+
+lista de principios
+→ entra desde la derecha
+```
+
+La opacidad aumenta progresivamente mientras ambos bloques alcanzan su posición final.
+
+El objetivo es mantener continuidad visual con Statement sin repetir su nivel de complejidad cinematográfica.
+
+Cuando `prefers-reduced-motion` está activo, el contenido permanece directamente en su posición normal.
+
+---
+
 ## 34. CTA
 
 La flecha del CTA utiliza una pequeña separación visual en hover.
@@ -604,6 +644,116 @@ Products
 mediante narrativa de scroll.
 
 ---
+
+## 39. Narrativa Hero → Statement → Products
+
+La transición cinematográfica ya está implementada.
+
+Hero y Statement forman una única escena mediante:
+
+```text
+IntroJourney
+```
+
+El progreso global se calcula con:
+
+```text
+useScroll
++
+useSpring
+```
+
+y se comparte entre los componentes participantes.
+
+---
+
+## 40. Timeline compartido
+
+La escena utiliza un único MotionValue como reloj.
+
+Conceptualmente:
+
+```text
+smoothProgress
+      │
+      ├── VialJourney
+      │
+      └── StatementReveal
+```
+
+Esto evita que cada componente mida el scroll independientemente.
+
+La sincronización es determinista: un mismo valor de progreso representa el mismo instante para vial y contenido.
+
+---
+
+## 41. Recorrido del vial
+
+La narrativa aproximada es:
+
+```text
+0.00 ─ 0.18
+Hero estable
+
+0.18 ─ 0.48
+viaje diagonal derecha → izquierda
+
+0.48 ─ 0.66
+vial instalado en Statement
+
+0.66 ─ 0.92
+salida progresiva
+
+0.92 ─ 1.00
+Products queda visualmente limpio
+```
+
+Durante el viaje se transforman:
+
+```text
+x
+y
+scale
+rotateZ
+opacity
+```
+
+Estas transformaciones globales viven en `VialJourney`.
+
+Las interacciones internas continúan perteneciendo a `VialVisual`:
+
+```text
+pointer tracking
+rotateX
+rotateY
+idle
+glow
+highlight
+```
+
+---
+
+## 42. Entrada sincronizada de Statement
+
+`StatementReveal` utiliza el mismo progreso global que `VialJourney`.
+
+La composición aparece progresivamente mediante:
+
+```text
+línea
+↓
+identificador editorial
+↓
+heading
+↓
+párrafo
+```
+
+Además del movimiento lateral se utiliza opacidad progresiva.
+
+El contenido no alcanza presencia completa antes de la llegada del vial.
+
+Esto permite que ambos elementos parezcan formar parte de una única coreografía en lugar de dos animaciones independientes.
 
 ## 40. Objetivo del handoff
 

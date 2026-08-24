@@ -34,10 +34,11 @@ El proyecto sigue una dirección visual **Dark Biotech / Editorial Science** y s
 - [x] Narrativa de scroll Hero → Statement → Products
 - [x] Vial compartido entre Hero y Statement
 - [x] Animación sincronizada de Statement
+- [x] Sección Quality
+- [x] Entrada editorial animada de Quality
 
 ### Pendiente
 
-- [ ] Quality
 - [ ] Brand Statement
 - [ ] Contact
 - [ ] Footer

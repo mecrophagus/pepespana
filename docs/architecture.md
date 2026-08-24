@@ -295,6 +295,105 @@ La sección utiliza contenido HTML indexable y mantiene una jerarquía semántic
 
 ---
 
+### IntroJourney
+
+Archivo:
+
+```text
+components/IntroJourney.tsx
+```
+
+Responsabilidades:
+
+- agrupar Hero y Statement dentro de una misma escena de scroll;
+- medir un único progreso global mediante `useScroll`;
+- suavizar ese progreso con `useSpring`;
+- compartir el mismo MotionValue con los componentes participantes;
+- mantener separada la estructura semántica de la narrativa visual.
+
+`IntroJourney` funciona como Client Component porque necesita medir el scroll en el navegador.
+
+El progreso compartido evita que distintos componentes calculen timelines independientes y terminen desincronizados.
+
+Conceptualmente:
+
+```text
+IntroJourney
+│
+├── Hero
+├── Statement
+│   └── StatementReveal
+│
+└── VialJourney
+    └── VialVisual
+```
+
+---
+
+### VialJourney
+
+Archivo:
+
+```text
+components/VialJourney.tsx
+```
+
+Responsabilidades:
+
+- controlar la posición global del vial durante la escena introductoria;
+- desplazar el vial desde Hero hacia Statement;
+- definir su escala, rotación y opacidad según el scroll;
+- mantener una pausa visual dentro de Statement;
+- retirar el vial antes de que Products tome protagonismo.
+
+`VialJourney` no controla internamente el pointer tracking ni el idle del vial.
+
+Estas responsabilidades permanecen dentro de:
+
+```text
+VialVisual.tsx
+```
+
+Esto mantiene separados:
+
+```text
+trayectoria global
+≠
+interacción local del objeto
+```
+
+---
+
+### StatementReveal
+
+Archivo:
+
+```text
+components/StatementReveal.tsx
+```
+
+Responsabilidades:
+
+- animar la entrada editorial del contenido de Statement;
+- sincronizar identificador, heading, párrafo y línea ambiental;
+- utilizar exactamente el mismo progreso global que `VialJourney`;
+- respetar `prefers-reduced-motion`.
+
+La entrada utiliza una secuencia progresiva:
+
+```text
+línea
+↓
+identificador
+↓
+título
+↓
+texto
+```
+
+Todos los elementos utilizan el mismo reloj de `IntroJourney`, evitando desincronización entre la llegada del vial y la aparición del contenido.
+
+---
 
 ### Products
 
@@ -353,6 +452,50 @@ tarjetas diferentes
 ```
 
 Esto evita copiar y pegar siete estructuras prácticamente idénticas.
+
+---
+
+### Quality
+
+Archivo:
+
+```text
+components/Quality.tsx
+```
+
+Responsabilidades:
+
+- presentar los principios editoriales de calidad de PepEspaña;
+- cambiar deliberadamente el ritmo visual después del catálogo;
+- evitar claims técnicos o comerciales no verificados;
+- utilizar una composición de columna editorial + lista de principios;
+- controlar una entrada local sincronizada con scroll;
+- respetar `prefers-reduced-motion`.
+
+A diferencia de `Statement`, Quality no participa en la timeline compartida de `IntroJourney`.
+
+Su animación es completamente local a la propia sección, por lo que actualmente no necesita un componente adicional como `QualityReveal`.
+
+`Quality.tsx` funciona como Client Component debido al uso de:
+
+```text
+useScroll
+useSpring
+useTransform
+useReducedMotion
+```
+
+La decisión evita introducir una abstracción adicional sin necesidad real.
+
+Conceptualmente:
+
+```text
+Quality
+├── contenido editorial izquierdo
+└── lista de principios derecha
+```
+
+Ambos lados se aproximan desde direcciones opuestas y adquieren opacidad progresivamente durante el scroll.
 
 ---
 
