@@ -31,10 +31,12 @@ El proyecto sigue una dirección visual **Dark Biotech / Editorial Science** y s
 - [x] Microinteracciones de producto
 - [x] Git y GitHub
 - [x] Statement editorial
-
+- [x] Narrativa de scroll Hero → Statement → Products
+- [x] Vial compartido entre Hero y Statement
+- [x] Animación sincronizada de Statement
 
 ### Pendiente
-- [ ] Narrativa de scroll Hero → Products
+
 - [ ] Quality
 - [ ] Brand Statement
 - [ ] Contact
