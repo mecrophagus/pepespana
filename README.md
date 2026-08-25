@@ -36,6 +36,12 @@ El proyecto sigue una dirección visual **Dark Biotech / Editorial Science** y s
 - [x] Animación sincronizada de Statement
 - [x] Sección Quality
 - [x] Entrada editorial animada de Quality
+- [x] Integración de identidad visual oficial pepEspaña v1.0
+- [x] Logotipo oficial responsive en navegación
+- [x] Favicon, icono SVG y Apple Touch Icon
+- [x] Manrope como tipografía corporativa
+- [x] Sistema de tokens de marca e interfaz
+- [x] Reconciliación cromática de la landing con la identidad oficial
 
 ### Pendiente
 

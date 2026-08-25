@@ -854,5 +854,41 @@ docs/seo.md
 docs/accessibility.md
 docs/deployment.md
 ```
+## Identidad oficial pepEspaña v1.0
+
+La identidad visual oficial se integra desde los assets aprobados del sistema de marca.
+
+### Assets web
+
+```text
+public/brand/
+├── pepespana-logo-web-white.svg
+├── pepespana-logo-web.svg
+├── pepespana-symbol-web-white.svg
+└── pepespana-symbol-web.svg
+```
+
+Para superficies oscuras, la navegación utiliza:
+
+```text
+pepespana-logo-web-white.svg
+```
+
+La firma corporativa no debe reconstruirse mediante texto o una fuente tipográfica.
+
+### Iconos de aplicación
+
+Next.js utiliza sus convenciones nativas de App Router:
+
+```text
+app/
+├── favicon.ico
+├── icon.svg
+└── apple-icon.png
+```
+
+Los tres archivos derivan del isotipo oficial aprobado.
+
+Los SVG son la fuente preferente para aplicaciones web siempre que el contexto lo permita.
 
 Este documento debe actualizarse cuando cambie de manera importante la estrategia de assets.

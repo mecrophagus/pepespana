@@ -41,6 +41,26 @@ Se evita introducir abstracciones, librerías o capas arquitectónicas antes de 
 
 ---
 
+## Integración de marca
+
+La identidad oficial pepEspaña v1.0 se considera fuente de verdad para:
+
+- logotipo e isotipo;
+- tipografía;
+- colores corporativos;
+- iconografía de marca;
+- aplicaciones digitales.
+
+La interfaz mantiene una dirección Dark Editorial propia, diferenciando entre:
+
+```text
+Identidad corporativa
++
+Sistema visual de interfaz
+```
+
+Los colores oscuros de superficie pertenecen a la interfaz y no se consideran colores corporativos adicionales.
+
 ## 2. Stack principal
 
 La aplicación está construida actualmente con:

@@ -850,4 +850,15 @@ docs/seo.md
 docs/deployment.md
 ```
 
+## Identidad y accesibilidad
+
+- El documento principal utiliza `lang="es"`.
+- La firma horizontal incluye un texto alternativo identificativo.
+- Los colores corporativos de acento no se utilizan como único medio para comunicar información.
+- El logotipo negativo oficial se utiliza sobre superficies oscuras para conservar contraste.
+- Manrope se carga mediante `next/font`, evitando dependencias externas durante la navegación.
+
+---
+
+
 Este documento debe evolucionar conforme entren nuevos componentes interactivos.

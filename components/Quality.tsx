@@ -126,17 +126,17 @@ export default function Quality() {
                   }
             }
           >
-            <p className="mb-5 text-xs uppercase tracking-[0.32em] text-[#35C2FF]">
+            <p className="mb-5 text-xs uppercase tracking-[0.32em] text-brand-aqua">
               Calidad / 002
             </p>
 
             <h2
               id="quality-title"
-              className="text-4xl font-semibold leading-[1.05] tracking-[-0.035em] text-[#F4F7FA] md:text-5xl lg:text-6xl"
+              className="text-4xl font-semibold leading-[1.05] tracking-[-0.035em] text-text-brand-aqua md:text-5xl lg:text-6xl"
             >
               Criterio antes
               <br />
-              <span className="text-[#8D99A8]">
+              <span className="texttext-[#8D99A8]">
                 que promesas.
               </span>
             </h2>
@@ -167,7 +167,7 @@ export default function Quality() {
                 key={principle.id}
                 className="group grid gap-5 border-b border-white/10 py-8 transition-colors duration-300 md:grid-cols-[70px_1fr] md:py-10"
               >
-                <span className="text-xs tracking-[0.28em] text-[#35C2FF]">
+                <span className="text-xs tracking-[0.28em] text-brand-aqua">
                   {principle.id}
                 </span>
 

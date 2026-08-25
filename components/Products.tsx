@@ -14,7 +14,7 @@ export default function Products() {
       {/* Cabecera de sección */}
       <div className="mx-auto max-w-[1400px]">
         <div className="mb-14 max-w-2xl">
-          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#35C2FF]">
+          <p className="mb-4 text-sm uppercase tracking-[0.3em] text-brand-aqua">
             Catálogo
           </p>
 

@@ -15,13 +15,13 @@ export default function ProductCard({
   imageAlt,
 }: ProductCardProps) {
   return (
-    <article className="group relative h-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-[#35C2FF]/35 hover:bg-white/[0.045]">
+    <article className="group relative h-full overflow-hidden rounded-[28px] border border-white/10 bg-white/[0.03] p-6 transition-all duration-500 hover:-translate-y-1 hover:border-brand-aqua/35 hover:bg-white/[0.045]">
       {/* Glow ambiental interno.
           Solo gana presencia cuando el usuario interactúa con la card. */}
-      <div className="pointer-events-none absolute left-1/2 top-[42%] h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#0866FF]/0 blur-[90px] transition-all duration-700 group-hover:bg-[#0866FF]/15" />
+      <div className="pointer-events-none absolute left-1/2 top-[42%] h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-brand-ink/0 blur-[90px] transition-all duration-700 group-hover:bg-brand-ink/20" />
 
       {/* Número editorial del producto */}
-      <span className="relative z-10 text-xs tracking-[0.28em] text-[#35C2FF]">
+      <span className="relative z-10 text-xs tracking-[0.28em] text-brand-aqua">
         {id}
       </span>
 
@@ -38,7 +38,7 @@ export default function ProductCard({
 
       {/* Información del producto */}
       <div className="relative z-10 mt-6 border-t border-white/10 pt-5">
-        <h3 className="text-xl font-semibold tracking-tight text-[#F4F7FA]">
+        <h3 className="text-xl font-semibold tracking-tight text-brand-aqua">
           {name}
         </h3>
 
@@ -48,7 +48,7 @@ export default function ProductCard({
 
         <a
           href="#contacto"
-          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-[#35C2FF] transition-all duration-300 group-hover:gap-3"
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-brand-aqua transition-all duration-300 group-hover:gap-3"
         >
           Consultar producto
           <span aria-hidden="true">→</span>

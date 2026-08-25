@@ -109,7 +109,7 @@ export default function StatementReveal() {
                   }
             }
           >
-            <p className="text-xs uppercase tracking-[0.32em] text-[#35C2FF]">
+            <p className="text-xs uppercase tracking-[0.32em] text-brand-aqua">
               PepEspaña / Enfoque
             </p>
           </motion.div>
@@ -131,13 +131,13 @@ export default function StatementReveal() {
               Menos ruido.
               <br />
 
-              <span className="text-[#8D99A8]">
+              <span className="text-brand-aqua">
                 Más claridad.
               </span>
             </motion.h2>
 
             <motion.p
-              className="mt-8 max-w-2xl text-base leading-7 text-[#8D99A8] md:text-lg md:leading-8"
+              className="mt-8 max-w-2xl text-base leading-7 text-brand-aqua md:text-lg md:leading-8"
               style={
                 shouldReduceMotion
                   ? undefined
