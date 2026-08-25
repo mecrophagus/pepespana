@@ -14,9 +14,9 @@ export default function Hero() {
       {/* Glow decorativo de fondo.
           Refuerza la atmósfera Dark Biotech y conecta
           visualmente el contenido con la iluminación del vial. */}
-      <div className="pointer-events-none absolute right-[-10%] top-[20%] h-[520px] w-[520px] rounded-full bg-[#0866FF]/20 blur-[140px]" />
+      <div className="pointer-events-none absolute right-[-10%] top-[20%] h-130 w-130 rounded-full bg-[#0866FF]/20 blur-[140px]" />
 
-      <div className="mx-auto grid w-full max-w-[1400px] items-center gap-12 lg:grid-cols-2">
+      <div className="mx-auto grid w-full max-w-350 items-center gap-12 lg:grid-cols-2">
         {/* Columna de contenido */}
         <div className="relative z-10">
           <p className="mb-5 text-sm uppercase tracking-[0.3em] text-brand-aqua">
@@ -62,7 +62,7 @@ export default function Hero() {
             de Hero + Statement. */}
         <div
           aria-hidden="true"
-          className="hidden min-h-[520px] lg:block"
+          className="hidden min-h-130] lg:block"
         />
       </div>
     </section>

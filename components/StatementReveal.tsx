@@ -85,7 +85,7 @@ export default function StatementReveal() {
       {/* Línea ambiental de transición */}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-px w-[70%] -translate-x-1/2 origin-center bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        className="pointer-events-none absolute left-1/2 top-0 h-px w-[70%] -translate-x-1/2 origin-center bg-linear-to-r from-transparent via-white/10 to-transparent"
         style={
           shouldReduceMotion
             ? undefined
@@ -95,11 +95,11 @@ export default function StatementReveal() {
         }
       />
 
-      <div className="mx-auto w-full max-w-[1400px]">
+      <div className="mx-auto w-full max-w-350">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-center lg:gap-20">
           {/* Zona izquierda reservada también para la llegada del vial */}
           <motion.div
-            className="relative lg:min-h-[420px]"
+            className="relative lg:min-h-105"
             style={
               shouldReduceMotion
                 ? undefined

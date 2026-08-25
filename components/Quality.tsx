@@ -101,7 +101,7 @@ export default function Quality() {
           Aparece progresivamente durante la entrada de la sección. */}
       <motion.div
         aria-hidden="true"
-        className="pointer-events-none absolute left-1/2 top-0 h-px w-[70%] -translate-x-1/2 origin-center bg-gradient-to-r from-transparent via-white/10 to-transparent"
+        className="pointer-events-none absolute left-1/2 top-0 h-px w-[70%] -translate-x-1/2 origin-center bg-linear-to-r from-transparent via-white/10 to-transparent"
         style={
           shouldReduceMotion
             ? undefined
@@ -111,7 +111,7 @@ export default function Quality() {
         }
       />
 
-      <div className="mx-auto max-w-[1400px]">
+      <div className="mx-auto max-w-350">
         <div className="grid gap-16 lg:grid-cols-[0.9fr_1.1fr] lg:gap-24">
           {/* La columna principal llega desde la izquierda
               y gana opacidad de forma progresiva. */}
